@@ -2,3 +2,37 @@
     margin: 0;
     padding: 0;
 }
+.layui-layout-admin .hd_bg{
+    background-color: white;
+}
+.main_bg{
+    background-color: #f8f8f8;
+}
+.hd_bg{
+    height: 86px;
+}
+.left_icon{
+    font-size: 20px;
+}
+.layui-layout-admin .left_nav_width{
+    width: 250px;
+}
+.left_bg_color{
+    background-color: #f76d77;
+}
+.layui-nav .layui-nav-item a{
+    color: white;
+}
+/*.layui-nav .layui-nav-item:hover a{*/
+    /*color: #f76d77;*/
+/*}*/
+.left_nav_width .changone{
+    background-color: white;
+    color:#f76d77 !important;
+}
+.tab_title{
+    display: none;
+}
+.tab_act{
+    display: block;
+}
