@@ -6,38 +6,132 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<div class="main">
+
+
+<div class="main main_zhu ">
     <h2>校园食堂后台管理平台</h2>
     <!--<div class="mian_login">-->
-        <div class="username inpt">
-            <i class="user_img"></i>
-            <input type="text" placeholder="请输入管理员姓名" class="inp user_name">
-        </div>
-        <div class="password inpt">
-            <i class="pass_img"></i>
-            <input type="text" placeholder="请输入登录密码" class="inp user_pass">
-        </div>
-        <div class="checkbox">
-            <input type="checkbox" class="check">
-            <span >记住用户名</span>
-        </div>
+    <div class="username inpt">
+        <i class="user_img"></i>
+        <input type="text" placeholder="请设置用户名" class="inp user_name userN">
+        <span class="alert none use1 ">只能输入1-30个以字母开头的字符串</span>
+    </div>
+    <div class="password inpt" style="margin-top: 20px">
+        <i class="pass_img"></i>
+        <input type="text" placeholder="请设置登录密码" class="inp user_pass userP">
+        <span class="alert none usep">只能输入6-20个字母、数字、下划线</span>
+    </div>
+    <div class="password inpt" style="margin-top: 20px">
+        <i class="pass_img"></i>
+        <input type="text" placeholder="请确认密码密码" class="inp user_pass userRep">
+        <span class="alert none"> 和上面设置的密码不一样</span>
+    </div>
+    <div class="login_bg">
+        <button style="background-color: transparent;width: 200px;border-color: transparent;outline: none;cursor: pointer">注册</button>
+    </div>
+    <div class="else login_zc">
+        <span>已经注册请点击<button style="background-color: transparent;border-color: transparent;outline: none;">登录</button></span>
+    </div>
+</div>
+
+
+
+<div class="main mian_login">
+    <h2>校园食堂后台管理平台</h2>
+    <!--<div class="mian_login">-->
+    <div class="username inpt">
+        <i class="user_img"></i>
+        <input type="text"  placeholder="请输入管理员姓名" class="inp user_name">
+        <span class="alert none ">该用户名还未被注册</span>
+    </div>
+    <div class="password inpt">
+        <i class="pass_img"></i>
+        <input type="text" placeholder="请输入登录密码" class="inp user_pass">
+        <span class="alert none">密码有误请重试</span>
+    </div>
+    <div class="checkbox">
+        <form action=""></form>
+        <input type="checkbox" class="check">
+        <span >记住用户名</span>
+    </div>
     <!--</div>-->
     <div class="login_bg">
         <button style="background-color: transparent;width: 200px;border-color: transparent;outline: none;cursor: pointer">登录</button>
     </div>
-    <div class="else">
+    <div class="else login_inp">
         <span>还没注册？点击<button style="background-color: transparent;border-color: transparent;outline: none;">注册</button></span>
     </div>
 </div>
 
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.js"></script>-->
-<!--<script>-->
-    <!--function Usename() {-->
-        <!--$(".user_name").blur(function () {-->
-            <!--useReg=/-->
-        <!--})-->
-    <!--}-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+<script>
+   $(".login_inp").click(function () {
+       $(".mian_login").css({"transform":"rotateY(180deg)"});
+       $(".main_zhu").css({"transform":"rotateY(0deg)"});
+   });
+   $(".login_zc").click(function () {
+       $(".mian_login").css({"transform":"rotateY(0deg)"});
+       $(".main_zhu").css({"transform":"rotateY(180deg)"});
+   })
+</script>
+<script>
+// $(function () {
+    $(".userN").blur(function () {
+        // console.log($(".userN").val());
+        userReg=/^[a-zA-Z]{1,30}$/;
+        if ($(".userN").val()==null){
+            $(".use1").addClass("show");
+            return;
+            // console.log(1);
+        }
+        if (!userReg.test($(".userN").val())){
+            $(".use1").addClass("show");
+            return;
+            // console.log(1);
+        }else {
+            $(".use1").html("用户名可行")
+        }
+    })
 
-<!--</script>-->
+$(".userP").blur(function () {
+    matReg=/^(\w){6,20}$/;
+    if ($(".userP").val()==null){
+        $(".usep").addClass("show");
+        return;
+        // console.log(1);
+    }
+    if (!userReg.test($(".userP").val())){
+        $(".usep").addClass("show");
+        return;
+        // console.log(1);
+    }else {
+        $(".usep").html("密码可行")
+    }
+})
+// })
+
+
+
+
+
+    // var Zhuname=document.getElementsByClassName("userN")[0];
+    // var Zhupass=document.getElementsByClassName("userP")[0];
+    // var Zhurep=document.getElementsByClassName("userRep")[0];
+    // function foucs() {
+    //
+    // }
+</script>
+<script>
+    // $.ajax({
+    //     type:"post",
+    //     url:"http://www.shouziliu.com/baishi/user/login.php",
+    //     success:function (data) {
+    //         // $.each(data,function () {
+    //             console.log(data);
+    //         // })
+    //     }
+    //
+    // })
+</script>
 </body>
 </html>

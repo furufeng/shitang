@@ -820,7 +820,7 @@ a cite {
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 998;
+    /*z-index: 998;*/
     width: auto;
     overflow: hidden;
     overflow-y: auto;
@@ -1719,7 +1719,8 @@ a cite {
 }
 
 .layui-bg-black {
-    background-color: #f76d77 !important
+    /*background-color: #f76d77 !important*/
+    background: linear-gradient(#f76d77,#ff9b5b)!important;
 }
 
 .layui-bg-gray {
