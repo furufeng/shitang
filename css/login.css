@@ -78,18 +78,19 @@ body {
   width: 320px;
   height: 66px;
   margin: 0 auto;
-  margin-top: 26px;
+  margin-top: 20px;
+  margin-left: 30px;
   background: url("../images/06.png") no-repeat;
   background-size: 70% 70%;
   background-position: 45px 10px;
   line-height: 66px;
   text-align: center;
-  font-size: 20px;
   cursor: pointer;
 }
 .else {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-left: 10px;
   font-size: 12px;
   color: #C6C6C6;
 }
@@ -111,5 +112,26 @@ body {
 }
 .show {
   display: block;
+}
+.form_zhu > div {
+  width: 240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 1px solid #babdbd;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.form_zhu > div > span {
+  font-size: 10px;
+  color: red;
+}
+.form_zhu > div > input {
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: none;
 }
 /*# sourceMappingURL=login.css.map */
