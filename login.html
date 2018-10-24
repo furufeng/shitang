@@ -23,8 +23,8 @@
     </div>
     <div class="password inpt" style="margin-top: 20px">
         <i class="pass_img"></i>
-        <input type="text" placeholder="请确认密码密码" class="inp user_pass userRep">
-        <span class="alert none"> 和上面设置的密码不一样</span>
+        <input type="text" placeholder="请确认密码密码" class="inp user_pass userR">
+        <span class="alert none useH"> 和上面设置的密码不一样</span>
     </div>
     <div class="login_bg">
         <button style="background-color: transparent;width: 200px;border-color: transparent;outline: none;cursor: pointer">注册</button>
@@ -84,11 +84,12 @@
             return;
             // console.log(1);
         }
-        if (!userReg.test($(".userN").val())){
+        else if (!userReg.test($(".userN").val())){
             $(".use1").addClass("show");
             return;
             // console.log(1);
-        }else {
+        }
+        else {
             $(".use1").html("用户名可行")
         }
     })
@@ -100,12 +101,22 @@ $(".userP").blur(function () {
         return;
         // console.log(1);
     }
-    if (!userReg.test($(".userP").val())){
+    if (!matReg.test($(".userP").val())){
         $(".usep").addClass("show");
         return;
         // console.log(1);
     }else {
         $(".usep").html("密码可行")
+    }
+})
+
+$(".userR").blur(function () {
+    if(!($(".userR").val()==$(".userP").val())){
+        $(".useH").addClass("show");
+        // console.log(10);
+        // return
+    }else {
+        $(".useH").html("ok")
     }
 })
 // })

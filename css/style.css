@@ -11,9 +11,9 @@
     background-color: #f8f8f8;
 }
 
-.hd_bg {
-    height: 86px;
-}
+/*.hd_bg {*/
+    /*height: 86px;*/
+/*}*/
 
 .left_icon {
     font-size: 20px;
@@ -41,6 +41,7 @@
 
 .tab_title {
     display: none;
+    line-height: 60px;
 }
 
 .tab_act {
@@ -49,7 +50,7 @@
 
 .content {
     background-color: #00FF00;
-    top: 86px !important;
+    /*top: 86px !important;*/
     left: 250px;
     bottom: 0px !important;
     /*position: relative;*/
@@ -79,7 +80,7 @@
     height: 60px;
     width: 100px;
     background-color: white;
-    top: 70px;
+    /*top: 70px;*/
     left: 140px;
     text-align: center;
     line-height: 30px;
